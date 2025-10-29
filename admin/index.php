@@ -1,9 +1,6 @@
 <?php include_once './config/config.php'; ?>
-
 <?php
-    if(isset($_SESSION['userlogged']) == true) {
-        echo "verdadeiro";
-    } else {
+    if(!isset($_SESSION['userlogged'])) {
         header("Location: login.php");
     }
 ?>
@@ -16,6 +13,6 @@
     <title>LifeBook</title>
 </head>
 <body>
-    <h1>SEJA BEM VINDO AO LIFEBOOK!!</h1>
+    <h1>SEJA BEM VINDO <b><?= $_SESSION['userName'] ?></b> AO LIFEBOOK!!</h1>
 </body>
 </html>

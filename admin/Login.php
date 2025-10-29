@@ -20,7 +20,7 @@
         <input type="password" placeholder="Senha" required>
         <br>
         <button type="submit" id="button">Entrar</button>
-        <center><button type="submit" id="button2"><a href="index.html" id="button2">Criar nova conta?</a></button></center>
+        <center><button type="submit" id="button2"><a href="register.php" id="button2">Criar nova conta?</a></button></center>
 
     </form>
     </center>

@@ -26,7 +26,7 @@
         <button type="submit" id="button">Enviar</button>
 
     </form>
-    <center><p id="login1">Já tem uma conta?</p><a href="Login.html" id="login2">Conecte-se</a></center>
+    <center><p id="login1">Já tem uma conta?</p><a href="Login.php" id="login2">Conecte-se</a></center>
     </center>
 </body>
 </html>
