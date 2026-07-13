@@ -27,6 +27,6 @@
     </form>
     </center>
 
-    <script src="./js/login.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

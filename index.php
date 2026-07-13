@@ -6,12 +6,6 @@
     <title>LifeBook</title>
 </head>
 <body>
-    <h1>
-        <?php echo "Em breve - Site em php"; ?>
-        <br>
-        SOMA PHP: <?php echo 2+2?>
-        <br>
-        SOMA HTML: 2+2
-    </h1>
+    <h1>SEJA BEM VINDO <b><?= $_SESSION['userName'] ?></b> AO LIFEBOOK!!</h1>
 </body>
 </html>
