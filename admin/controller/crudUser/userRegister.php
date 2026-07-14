@@ -17,9 +17,10 @@
         $stmt->bindParam(':s', $senha);
         $stmt->bindParam(':n', $nome);
         $stmt->bindParam(':k', $nickname);
-
+        
         if ($stmt->execute()) {
             header("Location: ../../login.php");
+            exit;
         }
     } catch (PDOException $e) {
         die("ERRO AO TENTAR CRIAR USUARIO: " . $e->getMessage());
