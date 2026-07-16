@@ -10,6 +10,31 @@
     $nickname = $_POST['nickname'];
 
     try {
+        if (strlen($senha)<6) {
+            header("Location: ../../register.php?erro=2");
+            exit;
+        }
+
+        $sqlEmail = "SELECT * FROM usuarios WHERE email=:e";
+        $stmtEmail = $conn->prepare($sqlEmail);
+        $stmtEmail->bindParam(':e', $email);
+        $stmtEmail->execute();
+
+        if ($stmtEmail->rowCount() > 0) {
+            header("Location: ../../register.php?erro=1");
+            exit;
+        }
+
+        $sqlNick = "SELECT * FROM usuarios WHERE nickname=:k";
+        $stmtNick = $conn->prepare($sqlNick);
+        $stmtNick->bindParam(':k', $nickname);
+        $stmtNick->execute();
+
+        if ($stmtNick->rowCount() > 0) {
+            header("Location: ../../register.php?erro=3");
+            exit;
+        }
+
         $sql = "INSERT INTO usuarios(email, senha, nome, nickname) values (:e, :s, :n, :k)";
         $stmt = $conn->prepare($sql);
 
@@ -19,10 +44,11 @@
         $stmt->bindParam(':k', $nickname);
         
         if ($stmt->execute()) {
-            header("Location: ../../login.php");
+            header("Location: ../../login.php?erro=0");
             exit;
         }
     } catch (PDOException $e) {
-        die("ERRO AO TENTAR CRIAR USUARIO: " . $e->getMessage());
+
+        exit;
     }
 ?>

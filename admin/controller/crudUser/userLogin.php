@@ -1,4 +1,5 @@
 <?php
+    session_start();
     include_once '../../config/db.php';
     $database = new db();
     $conn = $database->conectar();
@@ -15,6 +16,12 @@
         $stmt->execute();
 
         if ($stmt->rowCount() === 1) {
+            $usuario = $stmt->fetch(PDO::FETCH_ASSOC);
+            $_SESSION['usuario_id'] = $usuario['id'];
+            $_SESSION['usuario_senha'] = $usuario['senha'];
+            $_SESSION['usuario_email'] = $usuario['email'];
+            $_SESSION['usuario_nome'] = $usuario['nome'];
+            $_SESSION['usuario_nickname'] = $usuario['nickname'];
             header("Location: ../../../index.php");
             exit;
             //while ($linha = $stmt->fetch(PDO::FETCH_ASSOC)) {
@@ -22,7 +29,7 @@
             //    echo "Senha: " . htmlspecialchars($linha['senha']) . "<hr>";
             //}
         }else{
-            echo '<script>alert("EMAIL OU SENHA ICORRETOS!")</script>';
+            header("Location: ../../login.php?erro=1");
             exit;
         }
     } catch (PDOException $e) {
