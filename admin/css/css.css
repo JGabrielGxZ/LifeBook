@@ -7,6 +7,21 @@ body {
     margin: 0;
 }
 
+.aside {
+    padding-left: 20px;
+    font-size: 20px;
+}
+
+#titulo1 {
+    color: rgb(0, 102, 255);
+    font-size: 40px;
+    padding-left: 10px;
+    margin-bottom: 10px;
+    padding-top: 0px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 2px;
+}
+
 #titulo {
     text-align: center;
     color: rgb(0, 102, 255);
