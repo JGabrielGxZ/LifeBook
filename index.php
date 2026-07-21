@@ -16,6 +16,7 @@ if (!isset($_SESSION['usuario_id'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="admin/css/css.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="icon" type="image/x-icon" href="admin/imagens/logo.png">
     <title>LifeBook</title>
 </head>
 <body>
@@ -25,7 +26,7 @@ if (!isset($_SESSION['usuario_id'])) {
     </div>
 
     <div class="header-centro">
-        <input type="text" placeholder="Pesquisar pessoas, posts, grupos...">
+        <input type="text" placeholder="🔍︎ Pesquisar pessoas, posts, grupos...">
     </div>
 
     <nav class="header-nav">
@@ -58,18 +59,21 @@ if (!isset($_SESSION['usuario_id'])) {
 <main>
     <aside class="sidebar-esquerda">
         <nav>
-            <a href="index.php"><i class="bi bi-house-fill"></i>Página Inicial</a>
+            <div class="nav-header">
+                <a href="index.php" class="ativo"><i class="bi bi-house-fill"></i>Página Inicial</a>
 
-            <a href=""><i class="bi bi-chat-dots-fill"></i>Mensagens</a>
+                <a href=""><i class="bi bi-chat-dots-fill"></i>Mensagens</a>
 
-            <a href=""><i class="bi bi-search"></i>Explorar</a>
+                <a href=""><i class="bi bi-search"></i>Explorar</a>
 
-            <a href=""><i class="bi bi-people-fill"></i>Amigos</a>
+                <a href=""><i class="bi bi-people-fill"></i>Amigos</a>
 
-            <a href=""><i class="bi bi-plus-square"></i>Criar</a>
-
-            <a href=""><i class="bi bi-person-circle"></i>Perfil</a>
-            <a href=""><i class="bi bi-gear-wide"></i>Configurações</a>
+                <a href=""><i class="bi bi-plus-square"></i>Criar</a>
+            </div>
+            <div class="nav-footer">
+                <a href=""><i class="bi bi-person-circle"></i>Perfil</a>
+                <a href=""><i class="bi bi-gear-wide"></i>Configurações</a>
+            </div>
         </nav>
     </aside>
 
