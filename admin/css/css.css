@@ -21,6 +21,10 @@ body {
     z-index: 1000;
 }
 
+.header-esquerda {
+    display: flex;
+}
+
 .header-centro {
     flex: 1;
     display: flex;
@@ -64,6 +68,11 @@ body {
     background-color: #2A3C5C;
 }
 
+.logo-image {
+    width: 50px;
+    height: 50px;
+}
+
 #logo {
     color: #3B82F6;
     font-size: 40px;
@@ -74,20 +83,47 @@ body {
     letter-spacing: 2px;
 }
 
-
-.header-direita {
-    display: flex;
-    align-items: center;
-}
-
 .perfil {
     display: flex;
     align-items: center;
+    margin-right: 30px;
+    position: relative;
 }
 
 .perfil .nome {
     color: white;
-    margin-right: 15px;
+}
+
+.perfil i {
+    color: #00ffea;
+}
+
+.perfil-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #1A243D;
+    border-radius: 8px;
+    padding: 8px;
+    min-width: 160px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.perfil-menu a {
+    text-decoration: none;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+}
+
+.perfil-menu a:hover {
+    background-color: #2A3C5C;
+}
+
+.perfil-menu.aberto {
+    display: flex;
+    flex-direction: column;
 }
 
 .header-nav {
@@ -121,8 +157,6 @@ body {
 .icone-acao {
     position: relative;
 }
-
-
 
 .badge {
     position: absolute;
@@ -416,4 +450,43 @@ input[type="text"]:focus {
 #login2 {
     color: white;
     text-decoration: underline;
+}
+
+
+/* ----- */
+
+#foto-input {
+    display: none;
+}
+
+#preview {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid rgb(0, 102, 255);
+    box-sizing: border-box;
+}
+
+.botao-camera {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(0, 102, 255);
+    border-radius: 50%;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    cursor: pointer;
+}
+
+.avatar-container {
+    position: relative;
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
 }

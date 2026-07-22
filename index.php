@@ -22,6 +22,7 @@ if (!isset($_SESSION['usuario_id'])) {
 <body>
 <header class="header">
     <div class="header-esquerda">
+        <img src="admin/imagens/logo.png" alt="" class="logo-image">
         <div id="logo">Lifebook</div>
     </div>
 
@@ -47,10 +48,16 @@ if (!isset($_SESSION['usuario_id'])) {
             <i class="bi bi-chat-dots-fill"></i>
         </button>
 
-        <div class="perfil">
+        <div class="perfil" id="perfil">
             <img src="https://placehold.co/32x32" alt="Foto de perfil" class="imagem">
             <div class="nome"><?php echo $_SESSION['usuario_nickname']; ?></div>
             <i class="bi bi-chevron-down"></i>
+
+            <div class="perfil-menu" id="perfil-menu">
+                <a href="perfil.php">Ver perfil</a>
+                <a href="configuracoes.php">Configurações</a>
+                <a href="admin/controller/logout.php">Sair</a>
+            </div>
         </div>
     </div>
 </header>
@@ -124,5 +131,6 @@ if (!isset($_SESSION['usuario_id'])) {
 
     </aside>
 </main>
+    <script src="admin/js/script.js"></script>
 </body>
 </html>

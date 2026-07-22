@@ -44,7 +44,7 @@
         $stmt->bindParam(':k', $nickname);
         
         if ($stmt->execute()) {
-            header("Location: ../../login.php?erro=0");
+            header("Location: ../../configurar_perfil.php");
             exit;
         }
     } catch (PDOException $e) {
