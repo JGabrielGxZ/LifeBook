@@ -22,6 +22,7 @@
             $_SESSION['usuario_email'] = $usuario['email'];
             $_SESSION['usuario_nome'] = $usuario['nome'];
             $_SESSION['usuario_nickname'] = $usuario['nickname'];
+            $_SESSION['usuario_foto'] = $usuario['foto_perfil'];
             header("Location: ../../../index.php");
             exit;
             //while ($linha = $stmt->fetch(PDO::FETCH_ASSOC)) {

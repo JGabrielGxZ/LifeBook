@@ -1,4 +1,5 @@
 <?php
+    session_start();
     include_once '../../config/db.php';
 
     $database = new db();
@@ -44,6 +45,11 @@
         $stmt->bindParam(':k', $nickname);
         
         if ($stmt->execute()) {
+            $_SESSION['usuario_id'] = $conn->lastInsertId();
+            $_SESSION['usuario_senha'] = $senha;
+            $_SESSION['usuario_email'] = $email;
+            $_SESSION['usuario_nome'] = $nome;
+            $_SESSION['usuario_nickname'] = $nickname;
             header("Location: ../../configurar_perfil.php");
             exit;
         }

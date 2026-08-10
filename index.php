@@ -49,7 +49,7 @@ if (!isset($_SESSION['usuario_id'])) {
         </button>
 
         <div class="perfil" id="perfil">
-            <img src="https://placehold.co/32x32" alt="Foto de perfil" class="imagem">
+            <img src="<?php echo $_SESSION['usuario_foto'];?>" alt="Foto de perfil" class="imagem">
             <div class="nome"><?php echo $_SESSION['usuario_nickname']; ?></div>
             <i class="bi bi-chevron-down"></i>
 
