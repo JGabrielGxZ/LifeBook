@@ -1,8 +1,10 @@
 <?php
     class db{
-        private $host = '127.0.0.1';
+        //private $host = '127.0.0.1';
+        private $host = 'localhost';
         private $user = 'root';
-        private $hash = 'root';
+        private $hash = '';
+        //private $hash = 'root';
         private $database = 'lifebook';
 
         public $conexao;
