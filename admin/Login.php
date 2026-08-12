@@ -17,7 +17,13 @@
             <h4 id="t3">Entre na sua conta para ver <br>fotos e videos dos seus amigos!</h4>
         </p>
             <input type="email" name="email" placeholder="Email" required id="email">
-            <input type="password" name="senha" placeholder="Senha" id="senha" required>
+
+            <div class="campo-senha-wrapper">
+                <input type="password" name="senha" placeholder="Senha" id="senha" required>
+                <i class="bi bi-eye" id="mostrarSenha" onclick="mostrarSenha()"></i>
+            </div>
+            
+            
 
             <div id="erro">
                 <?php if (isset($_GET['erro']) && $_GET['erro'] == 1): ?>
@@ -43,5 +49,6 @@
     <?php endif; ?>
 
     <script src="js/script.js"></script>
+    <script src="js/senha.js"></script>
 </body>
 </html>

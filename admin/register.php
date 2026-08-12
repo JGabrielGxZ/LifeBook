@@ -6,6 +6,7 @@
     <title>LifeBook</title>
     <link rel="stylesheet" href="css/css.css">
     <link rel="icon" type="image/x-icon" href="imagens/logo.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 </head>
 <body>
 
@@ -17,7 +18,12 @@
             <h4 id="t3">É rapido e facil!</h4>
         </p>
             <input type="email" placeholder="Email" required id="email" name="email">
-            <input type="password" placeholder="Senha" required name="senha">
+
+            <div class="campo-senha-wrapper">
+                <input type="password" placeholder="Senha" required name="senha" id="senha">
+                <i class="bi bi-eye" id="mostrarSenha" onclick="mostrarSenha()"></i>
+            </div>
+
             <input type="text" placeholder="Nome Completo" required name="nome">
             <input type="text" placeholder="Nome de Usúario" required name="nickname">
 
@@ -46,5 +52,6 @@
             window.history.replaceState(null, '', window.location.pathname);
         </script>
     <?php endif; ?>
+    <script src="js/senha.js"></script>
 </body>
 </html>

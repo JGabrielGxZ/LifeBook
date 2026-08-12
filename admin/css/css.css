@@ -396,6 +396,7 @@ input[type="text"] {
     font-size: 15px;
     outline: none;
     transition: border-color 0.2s ease;
+    display: flex;
 }
 
 input[type="email"]:focus,
@@ -409,6 +410,26 @@ input[type="text"]:focus {
     font-size: 14px;
     text-align: center;
     min-height: 18px;
+}
+.campo-senha-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.campo-senha-wrapper input{
+    width: 100%;
+    box-sizing: border-box;
+    padding-right: 40px;
+}
+
+#mostrarSenha {
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    transform: translateY(-50%);
+    color: black;
+    cursor: pointer;
+    
 }
 
 #button {

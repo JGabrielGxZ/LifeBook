@@ -1,8 +1,22 @@
 <?php
     session_start();
+    if (!isset($_SESSION['usuario_id']) && 1==1) {
+        header("Location: Login.php");
+        exit;
+    }
 
-    if (!isset($_SESSION['usuario_id'])) {
-        header("Location: login.php");
+    include_once 'config/db.php';
+    $database = new db();
+    $conn = $database->conectar();
+
+    $sql = "SELECT onboarding_completo FROM usuarios WHERE id = :id";
+    $stmt = $conn->prepare($sql);
+    $stmt->bindParam(':id', $_SESSION['usuario_id']);
+    $stmt->execute();
+    $usuario = $stmt->fetch(PDO::FETCH_ASSOC);
+
+    if ($usuario['onboarding_completo'] == 1) {
+        header("Location: ../index.php");
         exit;
     }
 ?>
@@ -46,7 +60,7 @@
             
 
             <center>
-                <a href="index.php">pular por enquanto...</a>
+                <button type="submit" formaction="controller/crudUser/pularConfiguracao.php" formmethod="POST">pular por enquanto...</button>
             </center>
     </form>
     </center>
