@@ -54,7 +54,7 @@ if (!isset($_SESSION['usuario_id'])) {
             <i class="bi bi-chevron-down"></i>
 
             <div class="perfil-menu" id="perfil-menu">
-                <a href="perfil.php">Ver perfil</a>
+                <a href="admin/controller/perfil/meuPerfil.php">Ver perfil</a>
                 <a href="configuracoes.php">Configurações</a>
                 <a href="admin/controller/logout.php">Sair</a>
             </div>
