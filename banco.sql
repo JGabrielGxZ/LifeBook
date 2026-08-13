@@ -6,7 +6,8 @@ create table usuarios(
     senha varchar(200) not null,
     nome varchar(500) not null,
     nickname varchar(200) not null unique,
-    foto_perfil varchar(255) default 'imagens/defaultAvatar.png'
+    foto_perfil varchar(255) default 'admin/imagens/defaultAvatar.png',
+    onboarding_completo TINYINT(1) DEFAULT 0
 );
 select * from usuarios;
 /*delete from usuarios where id=3;
