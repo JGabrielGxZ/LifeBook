@@ -30,16 +30,15 @@ if (!isset($_SESSION['usuario_id'])) {
         <input type="text" placeholder="🔍︎ Pesquisar pessoas, posts, grupos...">
     </div>
 
-    <nav class="header-nav">
-        <a href="index.php" class="nav-item ativo">
-            <i class="bi bi-house-fill"></i>
-        </a>
-        <a href="amigos.php" class="nav-item">
-            <i class="bi bi-people-fill"></i>
-        </a>
-    </nav>
-
     <div class="header-direita">
+        <nav class="header-nav">
+            <a href="index.php" class="nav-item ativo">
+                <i class="bi bi-house-fill"></i>
+            </a>
+            <a href="amigos.php" class="nav-item">
+                <i class="bi bi-people-fill"></i>
+            </a>
+        </nav>
         <button class="icone-acao">
             <i class="bi bi-bell-fill"></i>
             <span class="badge">3</span>
@@ -78,7 +77,7 @@ if (!isset($_SESSION['usuario_id'])) {
                 <a href=""><i class="bi bi-plus-square"></i>Criar</a>
             </div>
             <div class="nav-footer">
-                <a href=""><i class="bi bi-person-circle"></i>Perfil</a>
+                <a href="admin/controller/perfil/meuPerfil.php"><i class="bi bi-person-circle"></i>Perfil</a>
                 <a href=""><i class="bi bi-gear-wide"></i>Configurações</a>
             </div>
         </nav>
