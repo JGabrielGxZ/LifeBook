@@ -50,6 +50,7 @@
             $_SESSION['usuario_email'] = $email;
             $_SESSION['usuario_nome'] = $nome;
             $_SESSION['usuario_nickname'] = $nickname;
+            $_SESSION['usuario_foto'] = 'admin/imagens/defaultAvatar.png';
             header("Location: ../../configurar_perfil.php");
             exit;
         }

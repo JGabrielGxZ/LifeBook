@@ -47,9 +47,9 @@
                 <i class="bi bi-chevron-down"></i>
 
                 <div class="perfil-menu" id="perfil-menu">
-                    <a href="../../../admin/controller/perfil/meuPerfil.php">Ver perfil</a>
-                    <a href="../../../configuracoes.php">Configurações</a>
-                    <a href="../../../admin/controller/logout.php">Sair</a>
+                    <a href="../../../admin/controller/perfil/meuPerfil.php"><i class="bi bi-person"></i>Ver perfil</a>
+                    <a href="../../../admin/controller/configurações/perfilConfig.php"><i class="bi bi-person-fill-gear"></i>Configurações de perfil</a>
+                    <a href="../../../admin/controller/logout.php"><i class="bi bi-door-closed"></i>Sair</a>
                 </div>
             </div>
         </div>
@@ -58,7 +58,7 @@
         <aside class="sidebar-esquerda">
             <nav>
                 <div class="nav-header">
-                    <a href="index.php" class="ativo"><i class="bi bi-house-fill"></i>Página Inicial</a>
+                    <a href="../../../index.php"><i class="bi bi-house-fill"></i>Página Inicial</a>
 
                     <a href=""><i class="bi bi-chat-dots-fill"></i>Mensagens</a>
 
@@ -69,11 +69,41 @@
                     <a href=""><i class="bi bi-plus-square"></i>Criar</a>
                 </div>
                 <div class="nav-footer">
-                    <a href=""><i class="bi bi-person-circle"></i>Perfil</a>
+                    <a href="../../../admin/controller/perfil/meuPerfil.php" class="ativo"><img src="<?php echo "../../../" . $_SESSION['usuario_foto'];?>" alt="Foto de perfil" class="imagem"></i>Perfil</a>
                     <a href=""><i class="bi bi-gear-wide"></i>Configurações</a>
                 </div>
             </nav>
         </aside>
+
+        <section class="feed-principal">
+            <div class="perfil-headers">
+                <img src="<?php echo "../../../" . $_SESSION['usuario_foto'];?>" alt="Foto de perfil de Gabizin" class="foto-perfil-principal">
+                <div class="nomes-column">
+                    <div class="perfil-nickname"><?php echo $_SESSION['usuario_nickname'];?></div>
+                    <div class="perfil-name"><?php echo $_SESSION['usuario_nome'];?></div>
+                </div>
+            </div>
+            <div class="posts">
+                <div class="post">
+                    <div class="post-header">
+                        <img src="https://placehold.co/40x40" alt="Foto de perfil de Gabizin" class="imagem">
+                        <div class="info">
+                            <div class="nome">Gabizin</div>
+                            <div class="hora">2h</div>
+                        </div>
+                    </div>
+                    <p class="paragrafo-text">Acabei de finalizar meu novo projeto! Foi um desafio, mas o resultado ficou incrível.</p>
+                    <img src="https://placehold.co/600x400" alt="Imagem publicada no post" class="post-imagem">
+
+                    <div class="post-acoes">
+                        <button><i class="bi bi-hand-thumbs-up"></i> Curtir</button>
+                        <button><i class="bi bi-chat-left-text"></i> Comentar</button>
+                        <button><i class="bi bi-share"></i> Compartilhar</button>
+                        <button><i class="bi bi-bookmark"></i> Salvar</button>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
     <script src="../../js/script.js"></script>
 </body>

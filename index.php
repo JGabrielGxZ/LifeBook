@@ -53,9 +53,9 @@ if (!isset($_SESSION['usuario_id'])) {
             <i class="bi bi-chevron-down"></i>
 
             <div class="perfil-menu" id="perfil-menu">
-                <a href="admin/controller/perfil/meuPerfil.php">Ver perfil</a>
-                <a href="configuracoes.php">Configurações</a>
-                <a href="admin/controller/logout.php">Sair</a>
+                <a href="admin/controller/perfil/meuPerfil.php"><i class="bi bi-person"></i>Ver perfil</a>
+                <a href="admin/controller/configurações/perfilConfig.php"><i class="bi bi-person-fill-gear"></i>Configurações de perfil</a>
+                <a href="admin/controller/logout.php"><i class="bi bi-door-closed"></i>Sair</a>
             </div>
         </div>
     </div>
@@ -77,8 +77,9 @@ if (!isset($_SESSION['usuario_id'])) {
                 <a href=""><i class="bi bi-plus-square"></i>Criar</a>
             </div>
             <div class="nav-footer">
-                <a href="admin/controller/perfil/meuPerfil.php"><i class="bi bi-person-circle"></i>Perfil</a>
-                <a href=""><i class="bi bi-gear-wide"></i>Configurações</a>
+            <!-- <i class="bi bi-person-circle"> -->
+                <a href="admin/controller/perfil/meuPerfil.php"><img src="<?php echo $_SESSION['usuario_foto'];?>" alt="Foto de perfil" class="imagem">Perfil</a>
+                <a href="admin/controller/configurações/pages"><i class="bi bi-gear-wide"></i>Configurações</a>
             </div>
         </nav>
     </aside>

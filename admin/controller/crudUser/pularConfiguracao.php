@@ -15,6 +15,7 @@
         $stmt->bindParam(":i", $_SESSION['usuario_id']);
 
         if ($stmt->execute()) {
+            $_SESSION['usuario_foto'] = 'admin/imagens/defaultAvatar.png';
             header("Location: ../../../index.php");
             exit;
         }
