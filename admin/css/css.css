@@ -197,7 +197,7 @@ main {
 }
 
 .sidebar-esquerda {
-    width: 300px;
+    width: 50px;
     height: calc(100vh - 80px);
     left: 0;
     position: fixed;
@@ -206,6 +206,14 @@ main {
     flex-direction: column;
     display: flex;
     margin-top: 80px;
+    transition: width 0.2s ease;
+    z-index: 999;
+    overflow: hidden;
+}
+
+.sidebar-esquerda:hover {
+    width: 250px;
+    box-shadow: 4px 0 20px rgba(0,0,0,0.4);
 }
 
 .sidebar-esquerda nav {
@@ -226,8 +234,8 @@ main {
 
 .sidebar-esquerda nav .nav-footer img {
     margin-right: 3px;
-    width: 24px;
-    height: 24px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     object-fit: cover;
 }
@@ -254,6 +262,19 @@ main {
     font-weight: bold;
 }
 
+.sidebar-esquerda nav a span {
+    opacity: 0;
+    white-space: nowrap;
+    transition: opacity 0.2s ease;
+}
+
+.sidebar-esquerda:hover nav a span {
+    opacity: 1;
+}
+
+.sidebar-esquerda nav a i {
+    font-size: 30px;
+}
 
 
 .stories {
@@ -316,7 +337,7 @@ main {
 
 .feed-principal {
     flex: 1;
-    margin-left: 300px;
+    margin-left: 60px;
     margin-top: 80px;
 }
 
@@ -397,7 +418,7 @@ main {
     margin-top: -15px;
 }
 
-form {
+.form-claro {
     display: flex;
     flex-direction: column;
     gap: 12px;
@@ -587,3 +608,127 @@ input[type="text"]:focus {
         letter-spacing: -0.01em;      /* Letras ligeiramente mais juntas */ 
 }
 
+.sidebar-config {
+    width: 300px;
+    height: calc(100vh - 80px);
+    left: 60px;
+    position: fixed;
+    background: #121C33;
+    border-right: 1px solid #243454;
+    flex-direction: column;
+    display: flex;
+    margin-top: 80px;
+}
+
+.sidebar-config a {
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.sidebar-config a:hover {
+    transform: translateY(-5px);
+
+    box-shadow:0 10px 25px rgba(37,99,255,.25);
+}
+.sidebar-config a.ativo {
+    background-color: #13418b;
+    font-weight: bold;
+}
+
+.config-conteudo {
+    margin-left: 360px;
+    margin-top: 80px;
+    padding: 24px;
+    flex: 1;
+}
+
+
+.config-form-container {
+    max-width: 800px;
+}
+
+.config-form-container h2 {
+    color: white;
+    margin-bottom: 24px;
+}
+
+.config-foto-linha {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 24px;
+    background-color: #2A3C5C;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.config-foto-linha .config-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.botao-mudar-foto {
+    background-color: rgb(0, 102, 255);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 600px;
+}
+
+.botao-mudar-foto:hover {
+    background-color: rgb(0, 82, 204);
+}
+
+#foto-input {
+    display: none;
+}
+
+.config-form-container label {
+    display: block;
+    color: white;
+    font-size: 14px;
+    margin-bottom: 6px;
+    margin-top: 16px;
+}
+
+.config-form-container input[type="text"] {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #2A3C5C;
+    border-radius: 6px;
+    background-color: #1A243D;
+    color: white;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+.config-form-container input[type="text"]:focus {
+    outline: none;
+    border-color: rgb(0, 102, 255);
+}
+
+.config-form-container button[type="submit"] {
+    margin-top: 24px;
+    background-color: rgb(0, 102, 255);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.config-form-container button[type="submit"]:hover {
+    background-color: rgb(0, 82, 204);
+}

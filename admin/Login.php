@@ -12,7 +12,7 @@
 
     <h1 id="titulo">LifeBook</h1>
     <center>
-    <form id="form-login" action="./controller/crudUser/userLogin.php" method="post">
+    <form id="form-login" action="./controller/crudUser/userLogin.php" class="form-claro" method="post">
         <p>
             <h2 id="t2">ENTRE NA SUA CONTA DO LifeBook!</h2>
             <h4 id="t3">Entre na sua conta para ver <br>fotos e videos dos seus amigos!</h4>

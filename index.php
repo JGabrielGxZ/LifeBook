@@ -54,7 +54,7 @@ if (!isset($_SESSION['usuario_id'])) {
 
             <div class="perfil-menu" id="perfil-menu">
                 <a href="admin/controller/perfil/meuPerfil.php"><i class="bi bi-person"></i>Ver perfil</a>
-                <a href="admin/controller/configurações/perfilConfig.php"><i class="bi bi-person-fill-gear"></i>Configurações de perfil</a>
+                <a href="admin/controller/configuracoes/perfilConfig.php?aba=editar-perfil"><i class="bi bi-person-fill-gear"></i>Configurações de perfil</a>
                 <a href="admin/controller/logout.php"><i class="bi bi-door-closed"></i>Sair</a>
             </div>
         </div>
@@ -66,20 +66,41 @@ if (!isset($_SESSION['usuario_id'])) {
     <aside class="sidebar-esquerda">
         <nav>
             <div class="nav-header">
-                <a href="index.php" class="ativo"><i class="bi bi-house-fill"></i>Página Inicial</a>
+                <a href="index.php" class="ativo">
+                    <i class="bi bi-house-fill"></i>
+                    <span>Página Inicial</span>
+                </a>
 
-                <a href=""><i class="bi bi-chat-dots-fill"></i>Mensagens</a>
+                <a href="">
+                    <i class="bi bi-chat-dots-fill"></i>
+                    <span>Mensagens</span>
+                </a>
 
-                <a href=""><i class="bi bi-search"></i>Explorar</a>
+                <a href="">
+                    <i class="bi bi-search"></i>
+                    <span>Explorar</span>
+                </a>
 
-                <a href=""><i class="bi bi-people-fill"></i>Amigos</a>
+                <a href="">
+                    <i class="bi bi-people-fill"></i>
+                    <span>Amigos</span>
+                </a>
 
-                <a href=""><i class="bi bi-plus-square"></i>Criar</a>
+                <a href="">
+                    <i class="bi bi-plus-square"></i>
+                    <span>Criar</span>
+                </a>
             </div>
             <div class="nav-footer">
             <!-- <i class="bi bi-person-circle"> -->
-                <a href="admin/controller/perfil/meuPerfil.php"><img src="<?php echo $_SESSION['usuario_foto'];?>" alt="Foto de perfil" class="imagem">Perfil</a>
-                <a href="admin/controller/configurações/pages"><i class="bi bi-gear-wide"></i>Configurações</a>
+                <a href="admin/controller/perfil/meuPerfil.php">
+                    <img src="<?php echo $_SESSION['usuario_foto'];?>" alt="Foto de perfil" class="imagem">
+                    <span>Perfil</span>
+                </a>
+                <a href="admin/controller/configurações/pages">
+                    <i class="bi bi-gear-wide"></i>
+                    <span>Configurações</span>
+                </a>
             </div>
         </nav>
     </aside>

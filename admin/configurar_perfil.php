@@ -34,7 +34,7 @@
 <body>
     <h1 id="titulo">LifeBook</h1>
     <center>
-    <form id="form-login" action="controller/crudUser/processarFoto.php" method="post" enctype="multipart/form-data">
+    <form id="form-login" action="controller/crudUser/processarFoto.php" class="form-claro" method="post" enctype="multipart/form-data">
         <div class="avatar-container">
             <img src="imagens/defaultAvatar.png" id="preview">
             <label for="foto-input" class="botao-camera">

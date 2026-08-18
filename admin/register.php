@@ -12,7 +12,7 @@
 
     <h1 id="titulo">LifeBook</h1>
     <center>
-    <form action="controller/crudUser/userRegister.php" method="POST">
+    <form action="controller/crudUser/userRegister.php" class="form-claro" method="POST">
         <p>
             <h2 id="t2">CRIE UMA NOVA CONTA!</h2>
             <h4 id="t3">É rapido e facil!</h4>
