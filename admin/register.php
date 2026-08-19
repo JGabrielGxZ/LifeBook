@@ -23,6 +23,10 @@
                 <input type="password" placeholder="Senha" required name="senha" id="senha">
                 <i class="bi bi-eye" id="mostrarSenha" onclick="mostrarSenha()"></i>
             </div>
+            <div class = "passInfo" id="passInfo">
+                <span>A senha deve ter:</span>
+                <small>• No mínimo 6 caracteres</small>
+            </div>
 
             <input type="text" placeholder="Nome Completo" required name="nome">
             <input type="text" placeholder="Nome de Usúario" required name="nickname">
@@ -34,6 +38,8 @@
                     senha deve ter pelo menos 6 caracteres
                 <?php elseif((isset($_GET['erro']) && $_GET['erro'] == 3)): ?>
                     Nome de Usuario já existe
+                <?php elseif((isset($_GET['erro']) && $_GET['erro'] == 4)): ?>
+                    Coloque um Email Válido
                 <?php endif;?>
             </div>
 

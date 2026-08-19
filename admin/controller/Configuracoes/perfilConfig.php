@@ -26,8 +26,8 @@
         <?php include_once '../partials/sidebar-esquerda.php'; ?>
 
         <aside class="sidebar-config">
-            <a href="perfilConfig.php?aba=editar-perfil">Editar perfil</a>
-            <a href="perfilConfig.php?aba=seguranca">Senha e segurança</a>
+            <a href="perfilConfig.php?aba=editar-perfil" class="sub-botao edt"><i class="bi bi-person"></i>| Editar perfil</a>
+            <a href="perfilConfig.php?aba=seguranca" class="sub-botao seg"><i class="bi bi-key"></i>| Senha e segurança</a>
         </aside>
 
         <section class="config-conteudo">

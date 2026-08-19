@@ -5,14 +5,19 @@
     $database = new db();
     $conn = $database->conectar();
 
-    $email    = $_POST['email'];
-    $senha    = $_POST['senha'];
-    $nome     = $_POST['nome'];
-    $nickname = $_POST['nickname'];
+    $email    = trim($_POST['email']);
+    $senha    = trim($_POST['senha']);
+    $nome     = trim($_POST['nome']);
+    $nickname = trim($_POST['nickname']);
 
     try {
         if (strlen($senha)<6) {
             header("Location: ../../register.php?erro=2");
+            exit;
+        }
+
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            header("Location: ../../register.php?erro=4");
             exit;
         }
 

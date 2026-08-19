@@ -21,11 +21,12 @@ if (!isset($_SESSION['usuario_id'])) {
 </head>
 <body>
 <header class="header">
-    <div class="header-esquerda">
-        <img src="admin/imagens/logo.png" alt="" class="logo-image">
-        <div id="logo">Lifebook</div>
-    </div>
-
+    <a href="index.php" class="generic-a">
+        <div class="header-esquerda">
+            <img src="admin/imagens/logo.png" alt="" class="logo-image">
+            <div id="logo">Lifebook</div>
+        </div>
+    </a>
     <div class="header-centro">
         <input type="text" placeholder="🔍︎ Pesquisar pessoas, posts, grupos...">
     </div>
@@ -97,7 +98,7 @@ if (!isset($_SESSION['usuario_id'])) {
                     <img src="<?php echo $_SESSION['usuario_foto'];?>" alt="Foto de perfil" class="imagem">
                     <span>Perfil</span>
                 </a>
-                <a href="admin/controller/configurações/pages">
+                <a href="admin/controller/configuracoes/perfilConfig.php">
                     <i class="bi bi-gear-wide"></i>
                     <span>Configurações</span>
                 </a>

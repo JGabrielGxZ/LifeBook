@@ -1,8 +1,11 @@
 <header class="header">
-        <div class="header-esquerda">
-            <img src="../../imagens/logo.png" alt="" class="logo-image">
-            <div id="logo">Lifebook</div>
-        </div>
+        <a href="../../../index.php" class="generic-a">
+            <div class="header-esquerda">
+                <img src="../../imagens/logo.png" alt="" class="logo-image">
+                <div id="logo">Lifebook</div>
+            </div>
+        </a>
+
 
         <div class="header-direita">
             <nav class="header-nav">

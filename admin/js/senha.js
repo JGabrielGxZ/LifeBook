@@ -12,3 +12,16 @@ function mostrarSenha() {
         icone.classList.add("bi-eye")
     }
 }
+
+
+
+const senha = document.getElementById("senha");
+const passInfo = document.getElementById("passInfo");
+
+senha.addEventListener("focus", () => {
+    passInfo.style.display = "flex";
+});
+
+senha.addEventListener("blur", () => {
+    passInfo.style.display = "none";
+});

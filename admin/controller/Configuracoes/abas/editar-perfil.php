@@ -16,6 +16,5 @@
             <input type="text" name="nickname" id="nickname" value="<?php echo $_SESSION['usuario_nickname']; ?>">
 
             <button type="submit">Salvar alterações</button>
-
         </form>
     </div>

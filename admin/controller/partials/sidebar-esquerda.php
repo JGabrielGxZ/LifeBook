@@ -1,3 +1,8 @@
+<?php
+$paginaAtual = basename($_SERVER['PHP_SELF']);
+?>
+
+
 <aside class="sidebar-esquerda">
             <nav>
                 <div class="nav-header">
@@ -27,11 +32,11 @@
                     </a>
                 </div>
                 <div class="nav-footer">
-                    <a href="../../../admin/controller/perfil/meuPerfil.php" class="ativo">
+                        <a href="../../../admin/controller/perfil/meuPerfil.php" class="<?= $paginaAtual == 'meuPerfil.php' ? 'ativo' : '' ?>">
                         <img src="<?php echo "../../../" . $_SESSION['usuario_foto'];?>" alt="Foto de perfil" class="imagem">
                         <span>Perfil</span>
                     </a>
-                    <a href="">
+                    <a href="../../../admin/controller/configuracoes/perfilConfig.php" class="<?= $paginaAtual == 'perfilConfig.php' ? 'ativo' : '' ?>">
                         <i class="bi bi-gear-wide"></i>
                         <span>Configurações</span>
                     </a>
