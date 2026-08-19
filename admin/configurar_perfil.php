@@ -29,7 +29,7 @@
     <link rel="stylesheet" href="css/css.css">
     <link rel="icon" type="image/x-icon" href="imagens/logo.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-    <title>LifeBook</title>
+    <title>LifeBook - Foto de Perfil</title>
 </head>
 <body>
     <h1 id="titulo">LifeBook</h1>
