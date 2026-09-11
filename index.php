@@ -153,6 +153,30 @@ if (!isset($_SESSION['usuario_id'])) {
 
     </aside>
 </main>
+<footer>
+    <div id="hora">
+        <?php
+            // Mostra a hora inicial imediatamente assim que a página carrega
+            date_default_timezone_set('America/Sao_Paulo');
+            echo date('H:i:s');
+        ?>
+    </div>
+
+    <script>
+        function atualizarPag() {
+            // Busca apenas o texto puro gerado pelo arquivo hora.php
+            fetch('relogio.php')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('hora').innerHTML = data;
+            })
+            .catch(err => console.error("Erro ao atualizar hora:", err));
+        }
+
+        // Atualiza a cada 1 segundo (1000 milissegundos)
+        setInterval(atualizarPag, 1000);
+    </script>
+</footer>
     <script src="admin/js/script.js"></script>
 </body>
 </html>

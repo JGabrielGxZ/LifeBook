@@ -944,3 +944,12 @@ input[type="text"]:focus {
         font-size: 13px;
     }
 }
+
+
+
+
+
+
+#hora {
+    text-align: end;
+}
