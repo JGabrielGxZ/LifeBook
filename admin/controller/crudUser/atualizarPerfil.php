@@ -5,6 +5,29 @@
     $database = new db();
     $conn = $database->conectar();
 
+    // ===== NOVO: alterações de conta vindas da validação (email/senha) =====
+    if (isset($_SESSION['alteracao_confirmada'])) {
+        $alt = $_SESSION['alteracao_confirmada'];
+        unset($_SESSION['alteracao_confirmada']);
+
+        if (time() - $alt['ts'] > 300) {
+            header("Location: ../configuracoes/perfilConfig.php?aba=seguranca&erro=");
+            exit;
+        }
+
+        try {
+            if ($alt['tipo'] === 'email') {
+                // Quando migrar para hash: $alt['valor'] = password_hash($alt['valor'], PASSWORD_DEFAULT);
+
+            } elseif () {
+
+            } else {
+                exit;
+            }
+        } catch (\Throwable $th) {
+            //throw $th;
+        }
+    }
     $nomePerfil = trim($_POST['nome']);
     $nicknamePerfil = trim($_POST['nickname']);
 
