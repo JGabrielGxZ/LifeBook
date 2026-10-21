@@ -3,6 +3,7 @@
     include_once '../../../admin/config/configSeg.php';
     include_once '../../../admin/config/email.php';
 
+
     if ($_SERVER['REQUEST_METHOD'] !== "POST" || !isset($_POST['action'])) {
         header("Location: perfilConfig.php?aba=seguranca");
         exit;

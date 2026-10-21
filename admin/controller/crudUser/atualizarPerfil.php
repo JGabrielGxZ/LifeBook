@@ -17,17 +17,31 @@
 
         try {
             if ($alt['tipo'] === 'email') {
+                $stmt = $conn->prepare("UPDATE usuarios SET email = :v WHERE id = :i");
+            } elseif ($alt['tipo'] === 'senha') {
                 // Quando migrar para hash: $alt['valor'] = password_hash($alt['valor'], PASSWORD_DEFAULT);
-
-            } elseif () {
-
+                $stmt = $conn->prepare("UPDATE usuarios SET senha = :v WHERE id = :i");
             } else {
                 exit;
             }
-        } catch (\Throwable $th) {
-            //throw $th;
+
+            $stmt->execute([':v' => $alt['valor'], ':i' => $_SESSION['usuario_id']]);
+
+            if ($alt['tipo'] === 'email') {
+                $_SESSION['usuario_email'] = $alt['valor'];
+            }
+
+            session_regenerate_id(true);
+            header("Location : ../configuracoes/perfilConfig.php?aba=seguranca&sucesso=" . $alt['tipo']);
+            exit;
+        } catch (PDOException $e) {
+            $codigoErro = $e->getCode() === '23000' ? 2 : 9;
+            header("Location: ../configuracoes/perfilConfig.php?aba=seguranca&erro=$codigoErro");
+            exit;
         }
     }
+
+
     $nomePerfil = trim($_POST['nome']);
     $nicknamePerfil = trim($_POST['nickname']);
 
